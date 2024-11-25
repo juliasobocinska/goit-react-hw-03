@@ -1,12 +1,17 @@
 import React from "react";
-import './styles.css'
+import css from './Contact.module.css'
 
-const Contact = ({ name, number }) => {
+const Contact = ({ name, number, onDelete }) => {
+
+    console.log(css);
+
     return (
-        <li className="label">
-            <span className="name-number">{name} {number}</span>
-            <button className="btn">Delete</button>
+        <div className={css.contactList}>
+        <li className={css.contactItem}>
+            <span className={css.nameNumber}>{name} {number}</span>
+            <button className={css.btn} onClick={onDelete}>Delete</button>
         </li>
+        </div>
     )
 }
 

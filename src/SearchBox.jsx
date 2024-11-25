@@ -1,4 +1,5 @@
 import React from "react";
+import css from './Contact.module.css'
 
 const SearchBox = ({ value, onFilterChange }) => {
 
@@ -7,7 +8,7 @@ const SearchBox = ({ value, onFilterChange }) => {
     };
 
     return (
-        <div>
+        <div className={css.filter}>
         <p>Find contacts by name</p>
         <input 
             type="text" 

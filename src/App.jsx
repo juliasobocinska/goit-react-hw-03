@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import ContactList from './ContactList.jsx'
 import SearchBox from './SearchBox.jsx'
 import ContactForm from './ContactForm.jsx'
-import './styles.css'
+import css from './Contact.module.css'
 
 
 
@@ -56,8 +56,8 @@ const handleDeleteContact = (contactId) => {
 
     return (
       <>
-        <div>
-      <h1>Phonebook</h1>
+        <div className={css.appContainer}>
+      <h1 className={css.phonebook}>Phonebook</h1>
 
       <ContactList
         contacts={filteredContacts} 
